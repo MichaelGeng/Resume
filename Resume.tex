@@ -1,0 +1,186 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fontawesome}
+\usepackage{amsmath}
+\usepackage{multicol}
+
+\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
+\raggedright
+
+%  \renewcommand{\encodingdefault}{cg}
+  %\renewcommand{\rmdefault}{lgrcmr}
+  
+%Thanks to: 
+%http://web.archive.org/web/20110809021159/http://www.cmmichael.com/blog/2006/04/ 
+%12/latex-resume-template
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+\usepackage{xcolor}  
+\usepackage[hidelinks]{hyperref} 
+
+\newcommand{\click}[2]{\href{http://#1}{\colorlet{temp}{.}\color{blue}{\underline{\color{temp}#2}}\color{temp}}}  
+\newcommand{\clicks}[2]{\href{https://#1}{\colorlet{temp}{.}\color{blue}{
+\underline{\color{temp}#2}}\color{temp}}}  
+
+\newcommand{\area}[2]{\begin{verse}\textbf{#1}   #2 \end{verse}  
+}
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} 
+\vspace*{-6pt} \lineunder}
+
+\newcommand{\employer}[4]{{ \textbf{\uppercase{#1}} \hfill#2\\ 
+\emph{#3}} \hfill\textit{#4} \vspace*{1pt}}
+
+\newcommand{\contact}[3]{
+\vspace*{-14pt}
+\begin{center}
+{\Large \scshape \textbf{#1}}\\
+#2 %\lineunder 
+\\#3
+\end{center}
+\vspace*{-9pt}
+}
+
+\newenvironment{skills}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep 
+-2pt}}{\vspace*{4pt}\end{list}}
+
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep 
+-2pt}}{\vspace*{4pt}\end{list}}
+
+\newcommand{\school}[4]{
+ \textbf{#1} #2 $\bullet$ #3\\ 
+#4 \\ 
+}
+
+\newcommand{\highschool}[4]{
+ \textbf{#1} #2\\ \vspace*{5pt}
+
+}
+
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+
+\newcommand{\education}[4]{{ \textbf{\uppercase{#1}} \hfill#2\\ 
+\emph{#3}} \hfill\textit{#4} \vspace*{1pt}\\ }
+
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-54pt}
+
+\contact{Michael Geng}	
+{734.546.5913 $\cdot$ U.S. Citizen $\cdot$ michaelhgeng@gmail.com}
+
+\header{\textbf{Education}}
+\vspace*{3pt}
+
+\education{University of Michigan}{Ann Arbor, MI}{B.S. Computer Science}{Graduated December 2018}
+\vspace*{-3pt}
+\area{Selected Coursework:}{Web Databases \& Information Systems $\cdot$ Software Engineering $\cdot$ Computer Security $\cdot$ Computer Organization $\cdot$ Agile Web Development $\cdot$ Data Structures  \& Algorithms $\cdot$ Statistics \& Data Analysis $\cdot$ Essentials for Computer Scientists $\cdot$ Foundations of Computer Science}
+
+\header{\textbf{Experience}}
+\employer{Nike}{Beaverton, OR}
+{Back-End Software Engineer}{Spring 2019 - Current}
+	\begin{achievements}
+	\item Developing and deploying microservices using \textbf{Spring Boot} in \textbf{Java} and \textbf{Express} in \textbf{Node.js} into AWS
+	\item Worked with engineers on new REST endpoints regarding consumer cart, checkout, and payment transactions
+	\item Responsible for writing Unit, End-to-End, and Integration tests of new features and deploying with \textbf{Jenkins}
+	\item Technologies: Java, Spring Boot, Node.js, Express, JUnit, Mocha, Cucumber, Mockito, DynamoDB
+	\end{achievements}
+	
+\employer{Nike}{Beaverton, OR}
+{Software Engineer Intern}{Summer 2018}
+	\begin{achievements}
+	\item Developed Slack Backend API routes with \textbf{Flask} framework from \textbf{Python} to automate internal workflows
+	\item Created Frontend Dashboards using \textbf{React}, \textbf{Redux}, and \textbf{Node.js} within \textbf{JavaScript} to display API data
+	\item Technologies: React, Redux, Python, JavaScript, Git, Jira, Jenkins, Flask, Docker, and AWS (Lambda, EC2)
+	\end{achievements}
+	
+\employer{The Michigan Daily}{Ann Arbor, MI}
+{Software Engineer}{Winter 2018}
+	\begin{achievements}
+	\item Worked with student software engineers to build mobile application in \textbf{React Native} for iOS and Android
+	\item Worked in an agile team environment and participated and contributed to new ideas for mobile application
+	\end{achievements}
+
+\employer{General Motors Financial}{Detroit, MI}
+{IT Special Projects Intern}{Winter/Summer 2017}
+	\begin{achievements}
+	\item Worked with developers, business analysts, and leadership to improve intranet site performance user engagement through eliminating legacy code in front-end view with \textbf{HTML} and \textbf{CSS}
+        \item Created responsive web pages using \textbf{jQuery} library within \textbf{JavaScript} to modify and eliminate legacy code
+	\end{achievements}	
+
+\employer{Advantage Computing Systems}{Ann Arbor, MI}
+{Systems Analyst Intern}{Summer 2016}
+	\begin{achievements}
+	\item Worked along side developers, business analysts, and VP's to deliver software releases to international clients
+	\item Provided SQL application support in \textbf{mySQL} to test new deliverables and assist in large scale data migration
+	\item Implemented workflow through internal web solution to \textbf{automate} time-off requests, eliminating paper usage
+	\end{achievements}
+	
+\employer{Code-M}{Ann Arbor, MI}
+{Computer Science Tutor}{Winter 2016}
+	\begin{achievements}
+	\item Provided tutoring for projects in office hours for students in EECS 183 - Elementary Programming Concepts
+	\item Taught concepts in \textbf{C++} and \textbf{Python} such as strings, arrays, functions, classes, testing, and program design
+	\end{achievements}
+	
+\employer{University of Michigan Medical School}{Ann Arbor, MI}
+{Research Assistant}{Summer 2015}
+	\begin{achievements}
+	\item Worked with PhD students to develop intestinal stem cells to regenerate damage from chemotherapy
+	\item Assisted lab with cell culturing, gel electrophoresis, and generated \textbf{40\%} more protein than previous best case
+	\end{achievements}
+	
+\header{\textbf{Projects}}
+
+\textbf{Shed-It}, \textit{Reddit Bot @ /u/Shed-it}
+\begin{achievements}
+\item Created reddit bot utilizing \textbf {Python Reddit API Wrapper} to access Reddit's API for dieting comments
+\item Bot scans 200 latest comments every 20 seconds looking for keywords indicating a user's desire to lose weight
+\end{achievements}
+
+\textbf{HomePlate}, \textit{Web App @ Code for Good by JPMorgan Chase \& Co.}
+\begin{achievements}
+\item Worked in a team of four university students to build a web diary application for underprivileged children
+\item Developed full-stack web app using Node, Angular, Google Firebase, HTML/CSS, JavaScript, and jQuery.
+\item  Demoed and presented product to J.P Morgan executives and members of nonprofits in Chicago \faBarChart \click{docs.google.com/presentation/d/1Ooi15zdYRu3Xi650aCCaRHd5b85O35AJLMXs9L1mX6E/edit?usp=sharing}{View} 
+\end{achievements}
+
+\textbf{MichaelHGeng.com}, \textit{Personal Website}
+\begin{achievements}
+\item Built personal website utilizing HTML, CSS, JavaScript, jQuery, etc. to learn essentials of web development
+\item Utilized JavaScript libraries \textbf {Chart.js} to display skill progression and \textbf {Typed.js} to greet site visitors
+\end{achievements}
+
+\textbf{Wolverine Schedulizer}, \textit{Web App @MHacks X}
+\begin{achievements}
+\item  Utilized \textbf{REST APIs} on Universities Course API to implement an alternative to existing Course Guide
+\item Built with \textbf{Python} Back-End using the \textbf{Flask} library to represent JSON data in \textbf{HTML/CSS} Front-End
+\end{achievements}
+
+\header{\textbf{Skills}}
+\begin{skills}
+\item Languages: Java, Python, C++, JavaScript, SQL, NoSQL, HTML, CSS
+\item Frameworks: Spring Boot, Node.js, React.js, Flask, jQuery
+\item Databases: DynamoDB, SQLite, MySQL, MongoDB, Google Firebase
+\item Technologies: Git, NPM, Spring, Express, Webpack, Redux, Babel, REST APIs, AWS (EC2, Lambda)
+\end{skills}
+
+
+\vspace*{-13pt}
+\begin{center}
+\faGithub\,\click{https://github.com/MichaelGeng}{MichaelGeng} $\cdot$ \faLinkedin\,\click{www.linkedin.com/in/Michael-Geng}{Michael-Geng} $\cdot$ \faGlobe\,\click{michaelhgeng.com/}{MichaelHGeng.com}
+\end{center}
+
+
+\end{document}
